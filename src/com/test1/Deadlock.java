@@ -35,5 +35,6 @@ public class Deadlock {
 				gaston.bow(alphonse);
 			}
 		}).start();
+		
 	}
 }

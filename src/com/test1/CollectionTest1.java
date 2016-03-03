@@ -4,7 +4,9 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.NavigableMap;
 import java.util.Set;
+import java.util.concurrent.ConcurrentSkipListMap;
 
 public class CollectionTest1 {
 	
@@ -31,6 +33,13 @@ public class CollectionTest1 {
 		}
 		
 		System.out.println("B".compareTo("A"));
+		
+		NavigableMap<Integer, String> nMap = new ConcurrentSkipListMap<>();
+		nMap.put(3, "Three");
+		nMap.put(5, "Five");
+		nMap.put(2, "Two");
+		nMap.put(1, "One");		
+		System.out.println("CeilingKey: "+nMap.ceilingKey(4));
 	}
 
 }
